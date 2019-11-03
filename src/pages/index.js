@@ -1,9 +1,6 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
 import SEO from '../components/seo'
 import Link from '@material-ui/core/Link'
 
@@ -11,50 +8,55 @@ import gitHubIcon from '../assets/github-logo.png'
 import linkedInIcon from '../assets/linkedin-logo.png'
 import upworkIcon from '../assets/upwork-logo.png'
 
-const useStyles = makeStyles(theme => ({
-  grid: { minHeight: '80vh' },
-  paper: {
+const githubImageLink =
+  'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
+
+const Card = ({ children }) => {
+  const cardStyle = {
+    backgroundColor: '#f9f7f7',
     padding: '20px 50px 8px 50px',
-    backgroundColor: '#eaeaea',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  },
-  avatar: {
+    border: 'solid 1px white',
+    borderRadius: '2%',
+    boxShadow: 'rgb(169, 169, 169) 1px 1px 10',
+  }
+
+  return <div style={cardStyle}>{children}</div>
+}
+
+const Hero = () => {
+  const avatarStyle = {
     margin: 10,
     width: 175,
     height: 175,
-    border: '3.3px solid #ffffffd1;',
     boxShadow: '1.5px 1px 7px 0px #757575',
-  },
-  informationSection: {
+  }
+
+  return (
+    <Avatar style={avatarStyle}>
+      <img alt="Eduardo Pereira" src={githubImageLink}></img>
+    </Avatar>
+  )
+}
+
+const WhoAmI = () => {
+  const sectionStyle = {
     fontFamily: 'Verdana, monospace',
     fontSize: '0.8em',
     display: 'flex',
     color: '#383838',
     flexDirection: 'column',
     alignItems: 'center',
-  },
-}))
+  }
 
-const Hero = ({ classes }) => {
-  const githubImageLink =
-    'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
-
-  return (
-    <Avatar className={classes.avatar}>
-      <img alt="Eduardo Pereira" src={githubImageLink}></img>
-    </Avatar>
-  )
-}
-
-const WhoAmI = ({ classes }) => {
   return (
     <>
-      <div className={classes.informationSection}>
+      <section style={sectionStyle}>
         <h1 style={{ marginBlockEnd: '0.1em' }}>Eduardo G. S. Pereira</h1>
-        <h2 style={{ marginBlockStart: '0.1em' }}>Software Engineer</h2>
-      </div>
+        <h3 style={{ marginBlockStart: '0.1em' }}>Software Engineer</h3>
+      </section>
     </>
   )
 }
@@ -89,25 +91,32 @@ const ContactMe = () => {
   )
 }
 
-const HomePage = () => {
-  const classes = useStyles()
+const Container = ({ children }) => {
+  const containerStyle = {
+    minHeight: '80vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    flexWrap: 'wrap',
+    boxSizing: 'borderBox',
+  }
 
+  return <div style={containerStyle}>{children} </div>
+}
+
+const HomePage = () => {
   return (
     <>
       <SEO title="Home" />
-      <Grid
-        container
-        direction="column"
-        alignItems="center"
-        justify="center"
-        className={classes.grid}
-      >
-        <Paper className={classes.paper} elevation={7}>
-          <Hero classes={classes} />
-          <WhoAmI classes={classes} />
+      <Container>
+        <Card>
+          <Hero />
+          <WhoAmI />
           <ContactMe />
-        </Paper>
-      </Grid>
+        </Card>
+      </Container>
     </>
   )
 }
