@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import SEO from '../components/seo'
@@ -24,6 +25,7 @@ const NotFoundPage = () => {
   return (
     <>
       <SEO title="404: Not found" />
+      <Link to="/">random</Link>
       <Grid
         container
         direction="column"
