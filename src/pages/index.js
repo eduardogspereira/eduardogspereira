@@ -1,15 +1,16 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar'
-import IconButton from '@material-ui/core/IconButton'
+import { Link } from "gatsby"
+// import Avatar from '@material-ui/core/Avatar'
+// import IconButton from '@material-ui/core/IconButton'
 import SEO from '../components/seo'
-import Link from '@material-ui/core/Link'
+// import MaterialLink from '@material-ui/core/Link'
 
 import gitHubIcon from '../assets/github-logo.png'
 import linkedInIcon from '../assets/linkedin-logo.png'
 import upworkIcon from '../assets/upwork-logo.png'
 
-const githubImageLink =
-  'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
+// const githubImageLink =
+//   'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
 
 const Card = ({ children }) => {
   const cardStyle = {
@@ -35,9 +36,10 @@ const Hero = () => {
   }
 
   return (
-    <Avatar style={avatarStyle}>
-      <img alt="Eduardo Pereira" src={githubImageLink}></img>
-    </Avatar>
+    <div style={avatarStyle}>
+      <div>Teste</div>
+      {/* <img alt="Eduardo Pereira" src={githubImageLink}></img> */}
+    </div>
   )
 }
 
@@ -54,25 +56,26 @@ const WhoAmI = () => {
   return (
     <>
       <section style={sectionStyle}>
-        <h1 style={{ marginBlockEnd: '0.1em' }}>Eduardo G. S. Pereira</h1>
-        <h3 style={{ marginBlockStart: '0.1em' }}>Software Engineer</h3>
+        <h1 style={{ marginBlockEnd: '0.1em' }}>Eduardo Pereira</h1>
+        {/* <h3 style={{ marginBlockStart: '0.1em' }}>Software Engineer</h3> */}
       </section>
     </>
   )
 }
 
 const ContactIcon = ({ link, label, icon }) => (
-  <Link href={link} target="_blank">
-    <IconButton label={label} size="small">
-      <img alt={label} style={{ height: '20px' }} src={icon} />
-    </IconButton>
-  </Link>
+  <a href={link} target="_blank">
+    <div label={label} size="small">
+      <div>Teste</div>
+      {/* <img alt={label} style={{ height: '20px' }} src={icon} /> */}
+    </div>
+  </a>
 )
 
 const ContactMe = () => {
   return (
     <div>
-      <ContactIcon
+      {/* <ContactIcon
         link="https://github.com/eduardogspereira"
         label="github"
         icon={gitHubIcon}
@@ -86,7 +89,7 @@ const ContactMe = () => {
         link="https://www.upwork.com/fl/eduardogspereira"
         label="upwork"
         icon={upworkIcon}
-      />
+      /> */}
     </div>
   )
 }
@@ -116,6 +119,9 @@ const HomePage = () => {
           <WhoAmI />
           <ContactMe />
         </Card>
+        <p>
+          Check the link <Link to="/random-link">click here!!</Link>
+        </p>
       </Container>
     </>
   )
