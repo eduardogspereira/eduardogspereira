@@ -5,34 +5,27 @@ module.exports = {
     author: `eduardogspereira`,
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [
-    //       "UA-149773001-1", // Google Analytics / GA
-    //     ],
-    //     gtagConfig: {
-    //       optimize_id: "GTM-MTW5TQR",
-    //     },
-    //     pluginConfig: {
-    //       head: true,
-    //     },
-    //   },
-    // },
-    // `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['UA-145911801-1'],
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `eduardogspereira`,
-    //     short_name: `egsp`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: './src/assets/favicon.ico',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `eduardogspereira`,
+        short_name: `egsp`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: './src/assets/favicon.ico',
+      },
+    },
   ],
 }

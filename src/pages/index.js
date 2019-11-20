@@ -1,112 +1,102 @@
 import React from 'react'
-// import Avatar from '@material-ui/core/Avatar'
-// import IconButton from '@material-ui/core/IconButton'
+import styled, { keyframes } from 'styled-components'
 import SEO from '../components/seo'
-// import MaterialLink from '@material-ui/core/Link'
 
 import gitHubIcon from '../assets/github-logo.png'
 import linkedInIcon from '../assets/linkedin-logo.png'
 import upworkIcon from '../assets/upwork-logo.png'
 
-// const githubImageLink =
-//   'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
+const githubImageLink =
+  'https://avatars0.githubusercontent.com/u/13531067?s=460&v=4'
 
-const Card = ({ children }) => {
-  const cardStyle = {
-    backgroundColor: '#f9f7f7',
-    padding: '20px 50px 8px 50px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    border: 'solid 1px white',
-    borderRadius: '2%',
-    boxShadow: 'rgb(169, 169, 169) 1px 1px 10',
-  }
+const Container = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+`
 
-  return <div style={cardStyle}>{children}</div>
-}
+const Card = styled.div`
+  background-color: #f9f7f7;
+  padding: 20px 50px 8px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 2%;
+  box-shadow: rgb(169, 169, 169) 1px 1px 10;
+`
 
-const Hero = () => {
-  const avatarStyle = {
-    margin: 10,
-    width: 175,
-    height: 175,
-    boxShadow: '1.5px 1px 7px 0px #757575',
-  }
+const Hero = styled.img`
+  width: 175px;
+  height: 175px;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0.5px 0px 5px 0px #757575;
+`
 
-  return (
-    <div style={avatarStyle}>
-      <div>Teste</div>
-      {/* <img alt="Eduardo Pereira" src={githubImageLink}></img> */}
-    </div>
-  )
-}
+const Section = styled.section`
+  align-items: center;
+  color: #383838;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+`
 
-const WhoAmI = () => {
-  const sectionStyle = {
-    fontFamily: 'Verdana, monospace',
-    fontSize: '0.8em',
-    display: 'flex',
-    color: '#383838',
-    flexDirection: 'column',
-    alignItems: 'center',
-  }
+const Title = styled.h1`
+  margin-block-end: 0px;
+`
 
-  return (
-    <>
-      <section style={sectionStyle}>
-        <h1 style={{ marginBlockEnd: '0.1em' }}>Eduardo Pereira</h1>
-        {/* <h3 style={{ marginBlockStart: '0.1em' }}>Software Engineer</h3> */}
-      </section>
-    </>
-  )
-}
+const SubTitle = styled.h3`
+  margin-block-start: 5px;
+`
 
-const ContactIcon = ({ link, label, icon }) => (
-  <a href={link} target="_blank">
-    <div label={label} size="small">
-      <div>Teste</div>
-      {/* <img alt={label} style={{ height: '20px' }} src={icon} /> */}
-    </div>
-  </a>
+const WhoAmI = () => (
+  <Section>
+    <Title>Eduardo Pereira</Title>
+    <SubTitle>Software Engineer</SubTitle>
+  </Section>
 )
 
-const ContactMe = () => {
-  return (
-    <div>
-      {/* <ContactIcon
-        link="https://github.com/eduardogspereira"
-        label="github"
-        icon={gitHubIcon}
-      />
-      <ContactIcon
-        link="https://www.linkedin.com/in/eduardogspereira/"
-        label="linkedin"
-        icon={linkedInIcon}
-      />
-      <ContactIcon
-        link="https://www.upwork.com/fl/eduardogspereira"
-        label="upwork"
-        icon={upworkIcon}
-      /> */}
-    </div>
-  )
-}
+const ContactLink = styled.a``
+const ContactImage = styled.img`
+  height: 20px;
+`
+const ContactWrapper = styled.div`
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+`
 
-const Container = ({ children }) => {
-  const containerStyle = {
-    minHeight: '80vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    flexWrap: 'wrap',
-    boxSizing: 'borderBox',
-  }
+const ContactIcon = ({ link, label, icon }) => (
+  <ContactLink href={link} target="_blank">
+    <ContactImage alt={label} src={icon} />
+  </ContactLink>
+)
 
-  return <div style={containerStyle}>{children} </div>
-}
+const ContactMe = () => (
+  <ContactWrapper>
+    <ContactIcon
+      link="https://github.com/eduardogspereira"
+      label="github"
+      icon={gitHubIcon}
+    />
+    <ContactIcon
+      link="https://www.linkedin.com/in/eduardogspereira/"
+      label="linkedin"
+      icon={linkedInIcon}
+    />
+    <ContactIcon
+      link="https://www.upwork.com/fl/eduardogspereira"
+      label="upwork"
+      icon={upworkIcon}
+    />
+  </ContactWrapper>
+)
 
 const HomePage = () => {
   return (
@@ -114,13 +104,10 @@ const HomePage = () => {
       <SEO title="Home" />
       <Container>
         <Card>
-          <Hero />
+          <Hero alt="Eduardo Pereira" src={githubImageLink} />
           <WhoAmI />
           <ContactMe />
         </Card>
-        <p>
-          Check the link <a href="/random-link">click here!!</a>
-        </p>
       </Container>
     </>
   )
