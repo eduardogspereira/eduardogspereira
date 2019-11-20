@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ['UA-145911801-1'],
@@ -25,6 +31,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: './src/assets/favicon.ico',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: 'src/posts',
       },
     },
   ],

@@ -10,7 +10,6 @@ const Main = styled.main`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: blue;
   z-index: 0;
   align-items: center;
   justify-content: center;

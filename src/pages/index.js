@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 import SEO from '../components/seo'
 
 import gitHubIcon from '../assets/github-logo.png'
@@ -98,6 +99,27 @@ const ContactMe = () => (
   </ContactWrapper>
 )
 
+const PageSectionsWrapper = styled.section`
+  height: 30px;
+
+  & > a {
+    color: #4f4f4f;
+    font-weight: 600;
+
+    &:hover {
+      color: #1c1c1c;
+    }
+  }
+`
+
+const PageSections = () => {
+  return (
+    <PageSectionsWrapper>
+      <Link to="/blog">/blog</Link>
+    </PageSectionsWrapper>
+  )
+}
+
 const HomePage = () => {
   return (
     <>
@@ -106,6 +128,7 @@ const HomePage = () => {
         <Card>
           <Hero alt="Eduardo Pereira" src={githubImageLink} />
           <WhoAmI />
+          <PageSections />
           <ContactMe />
         </Card>
       </Container>
