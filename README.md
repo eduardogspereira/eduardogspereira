@@ -24,4 +24,4 @@ Any alteration at the master branch will trigger a hook at Netlify to redeploy t
 
 ## Salute Visitors
 
-Happy day!! :)
+Happy day!! :heart: :)
