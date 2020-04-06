@@ -23,6 +23,7 @@ export const query = graphql`
 const Container = styled.div`
   min-height: 100vh;
   display: flex;
+  background-color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;

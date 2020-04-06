@@ -10,26 +10,21 @@ const parseDate = date => dayjs(date).format('YYYY-MM-DD HH:mm')
 
 const Container = styled.div`
   min-height: 100vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
 `
 
-const Card = styled.div`
-  background-color: #f9f7f7;
-  padding: 20px 20px 8px 20px;
+const TitleWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: flex-start;
-  border: solid 1px white;
-  border-radius: 2%;
-  width: 700px;
-  height: 80vh;
+  width: 80%;
+  justify-content: space-between;
+  align-itens: center;
+  margin-bottom: 50px;
 `
 
 const Title = styled.h2`
@@ -38,30 +33,6 @@ const Title = styled.h2`
   height: 24px;
 `
 
-const Icon = styled.img`
-  width: 24px;
-  margin-left: 10px;
-`
-
-const BlogEntry = styled.section`
-  margin-bottom: 15px;
-  cursor: pointer;
-
-  & > a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #4f4f4f;
-
-    &:hover {
-      color: #1c1c1c;
-    }
-
-    & > span {
-      font-weight: 400;
-      font-size: 0.9em;
-    }
-  }
-`
 const BackToHome = styled(Link)`
   cursor: pointer;
   margin-top: 35px;
@@ -73,6 +44,34 @@ const BackToHome = styled(Link)`
   }
 `
 
+const Icon = styled.img`
+  width: 24px;
+  margin-left: 10px;
+`
+
+const BlogEntry = styled.section`
+  margin-bottom: 15px;
+  cursor: pointer;
+  align-self: flex-start;
+  padding-left: 10%;
+  color: black;
+
+  & > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+
+    &:hover {
+      color: #1c1c1c;
+    }
+
+    & > span {
+      font-weight: 400;
+      font-size: 0.9em;
+    }
+  }
+`
+
 const Blog = () => {
   const posts = usePosts()
 
@@ -80,20 +79,20 @@ const Blog = () => {
     <>
       <SEO title="Blog" />
       <Container>
-        <Card>
+        <TitleWrapper>
           <Title>
             Blog <Icon src={book} />
           </Title>
-          {posts.map(post => (
-            <BlogEntry>
-              <Link to={post.slug}>
-                {post.title}
-                <span> - {parseDate(post.date)}</span>
-              </Link>
-            </BlogEntry>
-          ))}
           <BackToHome to="/">&larr; Back to Home</BackToHome>
-        </Card>
+        </TitleWrapper>
+        {posts.map(post => (
+          <BlogEntry>
+            <Link to={post.slug}>
+              {post.title}
+              <span> - {parseDate(post.date)}</span>
+            </Link>
+          </BlogEntry>
+        ))}
       </Container>
     </>
   )
