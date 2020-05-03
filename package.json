@@ -9,6 +9,7 @@
     "@mdx-js/react": "^1.5.1",
     "babel-plugin-styled-components": "^1.10.6",
     "dayjs": "^1.8.17",
+    "disqus-react": "^1.0.8",
     "gatsby": "^2.18.0",
     "gatsby-plugin-google-gtag": "^1.1.16",
     "gatsby-plugin-manifest": "^2.2.29",

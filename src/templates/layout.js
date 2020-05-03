@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
+import { DiscussionEmbed } from 'disqus-react'
 import SEO from '../components/seo'
 
 const parseDate = date => dayjs(date).format('YYYY-MM-DD HH:mm')
@@ -21,28 +22,17 @@ export const query = graphql`
 `
 
 const Container = styled.div`
+  font-family: monospace;
+  font-size: 14px;
   min-height: 100vh;
   display: flex;
-  background-color: white;
   flex-direction: column;
-  justify-content: center;
+  background-color: white;
+  padding-left: 10px;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
-`
-
-const Card = styled.div`
-  background-color: #f9f7f7;
-  padding: 20px 20px 8px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: flex-start;
-  border: solid 1px white;
-  border-radius: 2%;
-  width: 90%;
-  height: 90vh;
 `
 
 const Title = styled.h2`
@@ -59,7 +49,10 @@ const Title = styled.h2`
 `
 
 const TextWrapper = styled.section`
-  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  width: 50%;
+  justify-content: center;
 `
 
 const BackToBlocks = styled(Link)`
@@ -67,6 +60,7 @@ const BackToBlocks = styled(Link)`
   margin-top: 35px;
   color: #4f4f4f;
   font-weight: 600;
+  padding-bottom: 30px;
 
   &:hover {
     color: #1c1c1c;
@@ -74,20 +68,29 @@ const BackToBlocks = styled(Link)`
 `
 
 const Layout = ({ data: { mdx: post } }) => {
+  const disqusConfig = {
+    shortname: 'eduardogspereira-dev',
+    config: {
+      identifier: post.frontmatter.slug,
+      title: post.frontmatter.title,
+    },
+  }
+
   return (
     <>
       <SEO title={post.frontmatter.title} />
       <Container>
-        <Card>
-          <Title>
-            {post.frontmatter.title}
-            <span>[{parseDate(post.frontmatter.date)}]</span>
-          </Title>
-          <TextWrapper>
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </TextWrapper>
-          <BackToBlocks to="/blog">&larr; Back to blog</BackToBlocks>
-        </Card>
+        <Title>
+          {post.frontmatter.title}
+          <span>[{parseDate(post.frontmatter.date)}]</span>
+        </Title>
+        <TextWrapper>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </TextWrapper>
+        <BackToBlocks to="/blog">&larr; Back to blog index</BackToBlocks>
+        <div style={{ width: '90%' }}>
+          <DiscussionEmbed {...disqusConfig} />
+        </div>
       </Container>
     </>
   )

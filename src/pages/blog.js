@@ -9,6 +9,8 @@ import usePosts from '../hooks/use-posts'
 const parseDate = date => dayjs(date).format('YYYY-MM-DD HH:mm')
 
 const Container = styled.div`
+  font-family: monospace;
+  font-size: 14px;
   min-height: 100vh;
   background-color: white;
   display: flex;
@@ -80,9 +82,6 @@ const Blog = () => {
       <SEO title="Blog" />
       <Container>
         <TitleWrapper>
-          <Title>
-            Blog <Icon src={book} />
-          </Title>
           <BackToHome to="/">&larr; Back to Home</BackToHome>
         </TitleWrapper>
         {posts.map(post => (
