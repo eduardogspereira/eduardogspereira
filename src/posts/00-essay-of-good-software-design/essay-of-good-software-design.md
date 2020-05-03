@@ -17,6 +17,8 @@ Software development is a discipline with a lot of trade-offs and each flow have
 
 Also, this is an ongoing list. The purpose of this list in the first place is to build a reference for myself :). I may remove or add new points in the future.
 
+---
+
 ## The Whole Team
 
 - All the members of the team must trust each other. <sup>1, 2, 5</sup>
@@ -44,6 +46,8 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 - Delivery the code when the user need <sup>1</sup>
   - To achieve it, use Continuous Delivery
 
+---
+
 ## The Developer
 
 - Needs to be affectionate for what you are building <sup>2, 5</sup>
@@ -62,6 +66,8 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 - Should always take a time to reflect about their development week. <sup>1</sup>
   - And thought it gain experience on their craft.
 - Always have a good context in the area you will be working. Study about it. <sup>1, 2, 5</sup>
+
+---
 
 ## The Project
 
@@ -85,6 +91,49 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
   - What should happen?
 - Always work on the big restrictions/challenges first. And categorize them! <sup>1</sup>
   - Identifying the biggest restrictions/challenges will make easier to see the whole problem.
+
+---
+
+## The Code
+
+- Always make the program correct. <sup>2</sup>
+- Which means a program that makes nothing more and nothing less than it's required.
+- Always keep your code easy to be changed. <sup>1, 2, 4</sup>
+- Follow the standard from the project you are working on. <sup>1, 3</sup>
+  - Try to respect the current structure of the project.
+  - But also use good sense.
+- Avoid coupling as much as possible. <sup>2, 4</sup>
+- Keep your code orthogonal. <sup>2, 4</sup>
+  - Avoid coupling
+  - Avoid globals
+  - Avoid similar functions (use DRY).
+- Split your project into layers <sup>2, 4</sup>
+  - Each layer will be an abstraction and only will access what is visible at the lower layer.
+- Avoid the excessive use of try/catch. <sup>2</sup>
+  - For sure there are exceptions.
+- Only access the object through their methods, to avoid coupling with their implementation <sup>2</sup>
+- Create an abstraction of the services that are being used <sup>2</sup>
+- Always ensure that your code is ready to be changed <sup>2</sup>
+- Code an "lazy" code. <sup>2</sup>
+- Always get feedback while you are advancing your code. <sup>2</sup>
+- Use the approach "Tell, Don't Ask" <sup>2, 4</sup>.
+  - Respect the encapsulation.
+  - Don't make a decision based on the internal state of an object. Instead, call the function that will make this change.
+- Only let your code deal with things that it directly knows. <sup>1, 2</sup>
+- Avoid use inheritance on your project. <sup>1, 2</sup>
+  - Always that is possible, use Interface or Mixings instead.
+- Let the validation of the object in a separate object, following the business rules. <sup>2</sup>
+- Avoid the maximum as possible the contact between codes. <sup>2</sup>
+  - Always that is possible, make the communication using messages.
+- Always use UTC! <sup>1, 2</sup>
+- Avoid programming by coincidence. <sup>2</sup>
+  - Be sure that you know why something is working.
+- Try to follow the pattern used by the community on the language that you are working on. <sup>1, 2</sup>
+- Use TDD! <sup>1, 2, 4</sup>
+- Follow the good practices from the language which you are coding. <sup>0, 2</sup>
+- Don't forget to gracious turnoff your services. <sup>1</sup>
+
+---
 
 ## Sources
 
