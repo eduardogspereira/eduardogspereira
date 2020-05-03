@@ -135,6 +135,16 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 
 ---
 
+TODO:
+
+- architectural
+- maintenance
+- observability
+- deployment
+- security
+
+---
+
 ## Sources
 
 1. Own Experience
