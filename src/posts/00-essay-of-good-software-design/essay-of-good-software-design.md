@@ -1,7 +1,7 @@
 ---
-title: Essay of a Good Software Product Workflow
+title: Essay of a Good Software Development Workflow
 author: Eduardo G. S. Pereira
-slug: /blog/essay-good-software-product-workflow
+slug: /blog/essay-good-software-development-workflow
 category: software
 tags: '#development'
 date: 2020-04-16T11:00:00.619Z
@@ -33,7 +33,8 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
   - Not only it will have benefits like increase the team ownership of the code. Having two developers coding together reduces the chances of bug at the code.
   - Also, with a second developer help us keep the tech quality higher. With a second person coding together you will be less tended to take shortcuts to finish the task.
 - Try to build small and stable teams. <sup>1, 2</sup>
-- Take care of the quality of the product. Support the developers that don't understand the break window philosophy and, encourage developers that didn't discover it yet. <sup>2</sup> - If the project starts to have many broken windows, the developers will be unhappy to work on the project. <sup>1</sup>
+- Take care of the quality of the product. Support the developers that don't understand the break window philosophy and, encourage developers that didn't discover it yet. <sup>2</sup>
+  - If the project starts to have many broken windows, the developers will be unhappy to work on the project. <sup>1</sup>
 - If you want that the team makes something, schedule it! Otherwise, it won't happen. <sup>2</sup>
 - Try to keep multifunctional teams. <sup>1, 2</sup>
 - The team must be able to solve all their problems without find blockers or gatekeepers. They must own the workflow they are working on. <sup>1</sup>
