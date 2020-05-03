@@ -143,4 +143,3 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 1. Clean Architecture
 1. Clean Coder
 1. Architectural Styles and Design of Network-based Software Architecture
-1. Web Performance - Steve Kinney
