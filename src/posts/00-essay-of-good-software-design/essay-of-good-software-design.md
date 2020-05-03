@@ -44,6 +44,22 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 - Delivery the code when the user need <sup>1</sup>
   - To achieve it, use Continuous Delivery
 
+# The Developer
+
+- Needs to be affectionate for what you are building <sup>2, 5</sup>
+- Needs to think about how his tasks related to the team goal <sup>2</sup>
+- Needs to think beyond the current problem, having the Big Picture for the company in mind. <sup>2</sup>
+- Always ask the 5 whys. <sup>0</sup>
+- Need to have a contingency for workflows that s/he can't control. <sup>1</sup>
+- Always use the trace bullet strategy <sup>0, 1</sup>
+- We should know that one of the functions of a developer is to help people understand their requirements. <sup>1</sup>
+- Should always find the bug only once! <sup>1</sup>
+  - Understand why the error happened.
+  - Write a test that replicated the error behavior.
+  - Fix the error :)
+- Should avoid the program by coincidence. <sup>1, 2</sup>
+- Should follow the 'Boy Scout Rule' <sup>5</sup>
+
 ## Sources
 
 1. Own Experience
