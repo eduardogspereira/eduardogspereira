@@ -9,7 +9,7 @@ import usePosts from '../hooks/use-posts'
 const parseDate = date => dayjs(date).format('YYYY-MM-DD HH:mm')
 
 const Container = styled.div`
-  font-family: monospace;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   min-height: 100vh;
   background-color: white;

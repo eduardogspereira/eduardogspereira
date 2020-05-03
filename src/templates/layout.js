@@ -22,7 +22,7 @@ export const query = graphql`
 `
 
 const Container = styled.div`
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   min-height: 100vh;
   display: flex;
@@ -36,7 +36,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  align-self: start;
+  align-self: center;
   display: flex;
   height: 24px;
 
@@ -49,9 +49,10 @@ const Title = styled.h2`
 `
 
 const TextWrapper = styled.section`
-  font-size: 15px;
+  font-size: 17px;
   line-height: 25px;
-  width: 50%;
+  width: 80%;
+  max-width: 680px;
   justify-content: center;
 `
 
