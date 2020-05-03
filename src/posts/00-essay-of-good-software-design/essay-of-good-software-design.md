@@ -61,6 +61,30 @@ Also, this is an ongoing list. The purpose of this list in the first place is to
 - Should follow the 'Boy Scout Rule' <sup>5</sup>
 - Should always take a time to reflect about their development week. <sup>1</sup>
   - And thought it gain experience on their craft.
+- Always have a good context in the area you will be working. Study about it. <sup>1, 2, 5</sup>
+
+## The Project
+
+- Try to always include the users in the development workflow. <sup>2</sup>
+  - Avoid construct features that the user won't user.
+- Use the Trace Bullets strategy for the project <sup>1, 2</sup>
+  - Try to construct the minimal as possible to validate your ideas with the user and from their feedback align the development.
+- Always make prototypes to verify if the product will make sense. <sup>1, 2</sup>
+  - If the team doesn't understand that a POC is disposable, then use the trace bullet approach.
+- All members of the team must know the big picture of the project. <sup>1</sup>
+- Always search for extreme cases on the requirements. <sup>2</sup>
+  - The client probably already knows the solution, but, it's good to ask to be sure that everybody is aligned.
+- The requirements flow should have a good frequency. <sup>1</sup>
+  - This allows for adjusting the direction if something shows up.
+- Try to always keep short stories. <sup>1, 2</sup>
+  - This will encourage developers to search for clarification. Improving the feedback process between coders and clients, before and during the - development process.
+- It's important to keep aa glossary of the terms to make sure that everybody is referring to the same thing <sup>2</sup>
+- Before trying to think out of the box, try to understand what are the restrictions of the box. Which are the impediments to achieve the goal? <sup>1</sup>
+  - Sometimes the hardest part is to find the limitations of the box.
+- Always align which is expectative for your user when everything works fine. <sup>1</sup>
+  - What should happen?
+- Always work on the big restrictions/challenges first. And categorize them! <sup>1</sup>
+  - Identifying the biggest restrictions/challenges will make easier to see the whole problem.
 
 ## Sources
 
